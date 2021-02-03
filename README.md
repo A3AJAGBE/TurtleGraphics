@@ -1,4 +1,4 @@
-## Turtle Graphics exercises completed
+## Turtle Graphics exercises completed in Day17 of #100daysofcode
 Using the python turtle graphics to complete some activities
 
 ![Spirograph Image](spirograph.png)
