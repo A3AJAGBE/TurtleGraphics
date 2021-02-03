@@ -26,13 +26,35 @@ for size in shape_size:
         turtle_sample.forward(100)
         turtle_sample.right(360 / size)"""
 
-# Draw a random walk
+"""# Draw a random walk
 turtle_sample.pensize(10)
 direction = [0, 90, 180, 270]
 shape_color = ['#00FFFF', '#87CEFA', '#556B2F', '#FFD700', '#FF1493']
 turtle_sample.speed('fastest')
 for _ in range(300):
     turtle_sample.color(random.choice(shape_color))
+    turtle_sample.forward(20)
+    turtle_sample.setheading(random.choice(direction))"""
+
+# Generate random RGB color
+turtle.colormode(255)
+
+
+def generate_color():
+    """Generate RGB colors"""
+    red = random.randint(0, 255)
+    blue = random.randint(0, 255)
+    green = random.randint(0, 255)
+    color = (red, blue, green)
+    return color
+
+
+# Draw the random walk with the generated color
+turtle_sample.pensize(10)
+direction = [0, 90, 180, 270]
+turtle_sample.speed('fastest')
+for _ in range(300):
+    turtle_sample.color(generate_color())
     turtle_sample.forward(20)
     turtle_sample.setheading(random.choice(direction))
 
