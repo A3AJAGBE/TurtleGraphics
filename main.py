@@ -40,8 +40,8 @@ for _ in range(300):
 turtle.colormode(255)
 
 
+# Generate RGB colors
 def generate_color():
-    """Generate RGB colors"""
     red = random.randint(0, 255)
     blue = random.randint(0, 255)
     green = random.randint(0, 255)
@@ -49,14 +49,22 @@ def generate_color():
     return color
 
 
-# Draw the random walk with the generated color
+"""# Draw the random walk with the generated color
 turtle_sample.pensize(10)
 direction = [0, 90, 180, 270]
 turtle_sample.speed('fastest')
 for _ in range(300):
     turtle_sample.color(generate_color())
     turtle_sample.forward(20)
-    turtle_sample.setheading(random.choice(direction))
+    turtle_sample.setheading(random.choice(direction))"""
+
+
+# Draw a Spirograph
+turtle_sample.speed('fastest')
+for _ in range(int(360/5)):
+    turtle_sample.color(generate_color())
+    turtle_sample.circle(100)
+    turtle_sample.right(5)
 
 # show the screen and close on click
 screen = turtle.Screen()
