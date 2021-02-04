@@ -6,20 +6,53 @@ screen = turtle.Screen()
 
 turtle_sample = turtle.Turtle()
 turtle_sample.shape('turtle')
-turtle_sample.hideturtle()
-
-# Generate random RGB color
-turtle.colormode(255)
 
 
-# Generate RGB colors
-def generate_color():
-    red = random.randint(0, 255)
-    blue = random.randint(0, 255)
-    green = random.randint(0, 255)
-    color = (red, blue, green)
-    return color
+# turtle_sample.hideturtle()
 
+# # Generate random RGB color
+# turtle.colormode(255)
+#
+#
+# # Generate RGB colors
+# def generate_color():
+#     red = random.randint(0, 255)
+#     blue = random.randint(0, 255)
+#     green = random.randint(0, 255)
+#     color = (red, blue, green)
+#     return color
+
+# A sketch app
+def forward():
+    turtle_sample.color('#00FFFF')
+    turtle_sample.forward(15)
+
+
+def backward():
+    turtle_sample.color('#FF1493')
+    turtle_sample.backward(15)
+
+
+def counter_clockwise():
+    turtle_sample.color('#FFD700')
+    turtle_sample.left(10)
+
+
+def clockwise():
+    turtle_sample.color('#556B2F')
+    turtle_sample.right(10)
+
+
+def clear():
+    turtle_sample.reset()
+
+
+screen.onkey(fun=forward, key='W')
+screen.onkey(fun=backward, key='S')
+screen.onkey(fun=counter_clockwise, key='A')
+screen.onkey(fun=clockwise, key='D')
+screen.onkey(fun=clear, key='C')
+screen.listen()
 
 """# Draw a square
 for i in range(4):
