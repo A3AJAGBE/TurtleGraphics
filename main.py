@@ -22,7 +22,7 @@ turtle_sample.shape('turtle')
 #     color = (red, blue, green)
 #     return color
 
-# A sketch app
+"""# A sketch app
 def forward():
     turtle_sample.color('#00FFFF')
     turtle_sample.forward(15)
@@ -52,7 +52,7 @@ screen.onkey(fun=backward, key='S')
 screen.onkey(fun=counter_clockwise, key='A')
 screen.onkey(fun=clockwise, key='D')
 screen.onkey(fun=clear, key='C')
-screen.listen()
+screen.listen()"""
 
 """# Draw a square
 for i in range(4):
